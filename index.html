@@ -1,44 +1,1044 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="Estilospagina1.css">
-	<link rel="icon" type="image/x-icon" href="Image-Gallery.png">
-</head>
-<body>
-	<div class="PrincipalInfo">
-		<nav>
-			<div>INFO</div>
-			<div>MERCH</div>
-			<div>MENU</div>
-		</nav>
-		<header>
-			<h1>PARADOX</h1>
-			<p>"Time is a limited and irreplaceable resource, so use the time to stay focused and motivated as you work towards your goals. Every second you spend working towards your goals brings you one step closer to achieving them, so don't let any time go to waste."</p>
-			<p>Would you like to know how to manage your time to achieve your goals?</p>
-			<p>this is our Newsletter</p>
-			<section class="SubmitInfo">
-				<form action="" method="get">
-					<div><input type="Email" placeholder="Ingresa tu email" name="email"></div><br>
-					<div><input type="Submit" name="enviar" placeholder="Ingresa tu email"></div>
-				</form>
-		</section>
-		</header>		
-	</div>
-	<div >
-		<main class="SecondInfo">
-			<div class="Child"><img class="img1" src="IMG/24.jpg" alt=""></div>
-			<div class="Child"><img class="img2" src="IMG/26.jpg" alt=""></div>
-			<div class="Child"><img class="img3" src="IMG/23.jpg" alt=""></div>
-		</main>
-		<div class="FooterDIV">
-		<footer>
-			<p>>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, nisi. Esse ex molestias laboriosam alias, illum excepturi ullam veniam deleniti harum temporibus, suscipit dolorem nostrum tenetur quisquam quas quidem porro?</p>
-		</footer>
-	</div>
-	</div>
-	
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Built by Pablo Nieto Pérez — wib.digital
+         Need changes or a new build? https://www.fiverr.com/pablonietop -->
+    <meta name="author" content="Pablo Nieto Pérez — wib.digital">
+    <link rel="author" href="https://www.fiverr.com/pablonietop">
+
+    <title>PARADOX — A Curated Reference Board on Time in Design</title>
+    <meta
+      name="description"
+      content="PARADOX collects 32 pieces of poster, typography and web design gathered around a single idea: time. Every piece is credited to the designer who made it."
+    >
+    <link rel="canonical" href="https://paradoxgallery.wib.digital/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paradoxgallery.wib.digital/">
+    <meta property="og:title" content="PARADOX — A Curated Reference Board on Time in Design">
+    <meta
+      property="og:description"
+      content="32 pieces of poster, typography and web design gathered around a single idea: time. Every piece credited to the designer who made it."
+    >
+    <meta property="og:image" content="https://paradoxgallery.wib.digital/assets/img/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/img/logo/paradox-mark.png">
+    <meta name="theme-color" content="#0d0d0d">
+
+    <link
+      rel="preload"
+      href="assets/fonts/caveat-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    <script defer src="assets/js/modules/scroll-lock.js"></script>
+    <script defer src="assets/js/modules/nav.js"></script>
+    <script defer src="assets/js/modules/gallery.js"></script>
+    <script defer src="assets/js/modules/lightbox.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pablo Nieto Pérez",
+      "url": "https://wib.digital",
+      "jobTitle": "Web Designer and Developer",
+      "sameAs": [
+        "https://www.fiverr.com/pablonietop",
+        "https://www.linkedin.com/in/pablo-nieto-perez-39a530292"
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <img
+            class="brand__mark"
+            src="assets/img/logo/paradox-mark.png"
+            width="28"
+            height="28"
+            alt=""
+          >
+          <span class="brand__text">PARADOX</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <svg class="nav-toggle__icon--open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M2 5h16M2 10h16M2 15h16" stroke-linecap="round"></path>
+          </svg>
+          <svg class="nav-toggle__icon--close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 4l12 12M16 4L4 16" stroke-linecap="round"></path>
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#collection">Collection</a></li>
+            <li><a class="site-nav__link" href="#about">About</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container section--flush">
+        <p class="eyebrow">Reference board</p>
+        <h1 class="hero__title">PARADOX</h1>
+
+        <blockquote class="hero__quote">
+          Time is a limited and irreplaceable resource, so use the time to stay
+          focused and motivated as you work towards your goals.
+        </blockquote>
+
+        <p class="hero__body">
+          Every second you spend working towards your goals brings you one step
+          closer to achieving them, so don't let any time go to waste. This is a
+          board of 32 pieces — posters, type specimens, identity and web design —
+          collected around that one idea. Nothing here was made by me: each piece
+          is credited to the designer who made it, and the collection exists to
+          study how other people have argued the same point.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="#collection">See the collection</a>
+          <a class="button button--secondary" href="#about">Read the credits</a>
+        </div>
+
+        <ul class="hero__meta">
+          <li>32 pieces</li>
+          <li>6 collections</li>
+          <li>6 credited sources</li>
+        </ul>
+      </section>
+
+      <section class="section" id="collection">
+        <div class="container">
+          <div class="section__header">
+            <p class="eyebrow">The collection</p>
+            <h2 class="section__title">32 pieces, six groupings</h2>
+            <p class="section__lead">
+              Filter by grouping, or open any piece to see it at full size.
+              Every card carries the name of the studio or designer behind it.
+            </p>
+
+            <div class="filters" role="group" aria-label="Filter the collection">
+              <button class="filter" type="button" data-filter="all" aria-pressed="true">
+                All <span class="filter__count">32</span>
+              </button>
+              <button class="filter" type="button" data-filter="posters" aria-pressed="false">
+                Posters <span class="filter__count">14</span>
+              </button>
+              <button class="filter" type="button" data-filter="typography" aria-pressed="false">
+                Typography <span class="filter__count">6</span>
+              </button>
+              <button class="filter" type="button" data-filter="web" aria-pressed="false">
+                Web <span class="filter__count">4</span>
+              </button>
+              <button class="filter" type="button" data-filter="digital" aria-pressed="false">
+                Digital <span class="filter__count">3</span>
+              </button>
+              <button class="filter" type="button" data-filter="architecture" aria-pressed="false">
+                Architecture <span class="filter__count">3</span>
+              </button>
+              <button class="filter" type="button" data-filter="identity" aria-pressed="false">
+                Identity <span class="filter__count">2</span>
+              </button>
+            </div>
+
+            <p class="visually-hidden" role="status" data-gallery-status></p>
+          </div>
+
+          <div class="gallery" data-gallery>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-poster.webp"
+                width="800"
+                height="800"
+                alt="Poster in acid yellow with the headline Expect the Unexpected set in heavy black type crossed by a looping script." fetchpriority="high"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected — quote detail"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-quote-detail.webp"
+                width="800"
+                height="800"
+                alt="Close crop of the acid yellow poster showing the line: it can be joy or sorrow, but either way, you have to be prepared."
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected — quote detail</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected — script detail"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-script-detail.webp"
+                width="800"
+                height="800"
+                alt="Close crop showing the word THE in condensed black caps beside a looping outlined script, over a halftone field."
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected — script detail</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected — lockup detail"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-lockup-detail.webp"
+                width="800"
+                height="800"
+                alt="Crop of the poster showing the line to not be surprised by an unusual event above the top of the word EXP." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected — lockup detail</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected — halftone detail"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-halftone-detail.webp"
+                width="800"
+                height="800"
+                alt="Crop of the poster where a diagonal halftone field meets flat yellow above the letters ECT." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected — halftone detail</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Expect the Unexpected — tiled banner"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/expect-the-unexpected-tiled.webp"
+                width="800"
+                height="240"
+                alt="Wide desaturated banner tiling several crops of the Expect the Unexpected poster side by side." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Expect the Unexpected — tiled banner</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Time Is All Relative"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/time-is-all-relative-poster.webp"
+                width="640"
+                height="800"
+                alt="Black poster with the line Time is all relative based on age and experience in white italic serif above two white bars." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Time Is All Relative</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Time Is All Relative — framed"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/time-is-all-relative-framed.webp"
+                width="639"
+                height="800"
+                alt="The Time is all relative poster centred inside a wide black border." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Time Is All Relative — framed</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Time Is All Relative — rotated layout"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/time-is-all-relative-rotated.webp"
+                width="750"
+                height="750"
+                alt="Off-white poster turned on its side, with Time is all relative set large in serif and age and experience picked out in blue." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Time Is All Relative — rotated layout</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Time Is All Relative — tiled banner"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/time-is-all-relative-tiled.webp"
+                width="800"
+                height="240"
+                alt="Wide banner tiling the Time is all relative poster in alternating upright and inverted positions." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Time Is All Relative — tiled banner</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: An Hour Is the Same Amount"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/an-hour-is-the-same-amount.webp"
+                width="639"
+                height="800"
+                alt="Off-white poster tilted on the diagonal reading: an hour is the same amount of time for everyone yet it can feel so different in how it goes by." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">An Hour Is the Same Amount</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Acceptance — pasted"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/acceptance-poster-on-wall.webp"
+                width="639"
+                height="800"
+                alt="The Acceptance poster pasted on a white painted wall, showing a black and white portrait interrupted by small labels reading truth and lies." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Acceptance — pasted</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Acceptance"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/acceptance-poster.webp"
+                width="639"
+                height="800"
+                alt="Poster with a black and white portrait broken by white blocks labelled truth and lies, with the word ACCEPTANCE in serif caps below." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Acceptance</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="posters">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Acceptance — detail"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/acceptance-detail.webp"
+                width="640"
+                height="800"
+                alt="Close crop of the Acceptance poster showing the halftone portrait and the truth and lies labels at large scale." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Acceptance — detail</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Reuel Dsgn (@reuel.dsgn)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — release poster"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-poster.webp"
+                width="750"
+                height="748"
+                alt="Type specimen poster: the words HAPPY FAT FONT in soft cream bubble letters over a grainy black and white photograph of two toddlers." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — release poster</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — alphabet"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-alphabet-solid.webp"
+                width="750"
+                height="748"
+                alt="Full uppercase alphabet and numerals of the HappyFatFont typeface in solid black bubble letters on a grey ground." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — alphabet</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — outline alphabet"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-alphabet-outline.webp"
+                width="750"
+                height="748"
+                alt="The HappyFatFont alphabet and numerals drawn as thin black outlines on a grey ground." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — outline alphabet</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — numerals"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-numerals.webp"
+                width="750"
+                height="748"
+                alt="Nine HappyFatFont numerals set very large in stone-coloured bubble forms on black." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — numerals</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — mark"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-mark.webp"
+                width="750"
+                height="748"
+                alt="A single rounded black glyph with a pale smile-shaped counter, used as the mark for the HappyFatFont release." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — mark</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="typography">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: HappyFatFont — archive photograph"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/happyfatfont-archive-photo.webp"
+                width="750"
+                height="748"
+                alt="Grainy black and white archive photograph of children sitting in a cardboard box on stone steps, used in the HappyFatFont campaign." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">HappyFatFont — archive photograph</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Jaz Heiman (@Jazheiman)</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="identity">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Gebeiteld — brochure spread"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/gebeiteld-brochure-spread.webp"
+                width="750"
+                height="750"
+                alt="Open brochure spread with a large roman numeral VII on the left page and a grid of small interior photographs on the right." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Gebeiteld — brochure spread</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Gebeiteld</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="identity">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Gebeiteld — folder"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/gebeiteld-folder-cover.webp"
+                width="750"
+                height="750"
+                alt="Kraft board folder printed with the Gebeiteld wordmark in white and the words Building and Signing at the foot." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Gebeiteld — folder</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Gebeiteld</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="digital">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Chrome Bloom — light"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/chrome-bloom-light.webp"
+                width="640"
+                height="800"
+                alt="Digital painting of glossy chrome ribbons curling across a pale ground, edged in pink, cyan and yellow." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Chrome Bloom — light</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">@songsandthespirits</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="digital">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Chrome Bloom — dark"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/chrome-bloom-dark.webp"
+                width="640"
+                height="800"
+                alt="Digital painting of white chrome forms breaking into a dark green and black field, lit from behind." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Chrome Bloom — dark</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">@songsandthespirits</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="digital">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Geometric Owl"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/geometric-owl.webp"
+                width="799"
+                height="800"
+                alt="Line drawing of an owl built from straight white facets on a black ground." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Geometric Owl</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Author unidentified</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="web">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Robbrecht en Daem — home"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/robbrecht-en-daem-home.webp"
+                width="799"
+                height="800"
+                alt="Screenshot of the Robbrecht en Daem architecten home page: thin rules top and bottom framing a horizontal row of small project photographs." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Robbrecht en Daem — home</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Robbrecht en Daem architecten</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="web">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Robbrecht en Daem — project page"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/robbrecht-en-daem-project.webp"
+                width="799"
+                height="800"
+                alt="Screenshot of a project page titled Katoen Natie VA, Antwerp, Belgium, with a single centred photograph above a column of text." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Robbrecht en Daem — project page</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Robbrecht en Daem architecten</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="web">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Robbrecht en Daem — mobile view"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/robbrecht-en-daem-mobile.webp"
+                width="800"
+                height="799"
+                alt="Mobile screenshot of a project page titled Floor for a sculpture, Wall for a painting, Amsterdam." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Robbrecht en Daem — mobile view</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Robbrecht en Daem architecten</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="web">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: CMV — home"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/cmv-studio-home.webp"
+                width="799"
+                height="800"
+                alt="Screenshot of the CMV studio home page: a full-bleed photograph looking up a ribbed tower facade, with the wordmark at top left." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">CMV — home</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">CMV</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="architecture">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Planted Terraces"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/planted-terraces-facade.webp"
+                width="750"
+                height="422"
+                alt="Concrete building whose stacked, curving balconies are planted with dense trailing greenery." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Planted Terraces</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Author unidentified</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="architecture">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Stone House Entrance"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/stone-house-entrance.webp"
+                width="800"
+                height="533"
+                alt="Single-storey house at dusk with a deep flat copper roof, rough stone walls and a tall ribbed timber door." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Stone House Entrance</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Author unidentified</span>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="card" data-collection="architecture">
+            <button
+              class="card__trigger"
+              type="button"
+              data-lightbox-open
+              aria-label="Enlarge: Towers, Diptych"
+            >
+              <img
+                class="card__image"
+                src="assets/img/content/singapore-towers-diptych.webp"
+                width="800"
+                height="520"
+                alt="Black and white diptych: the three towers of Marina Bay Sands beside an aerial view of a slab tower over low-rise housing." loading="lazy" decoding="async"
+              >
+            </button>
+            <figcaption class="card__body">
+              <h3 class="card__title">Towers, Diptych</h3>
+              <p class="card__credit">
+                Original work by <span class="card__author">Author unidentified</span>
+              </p>
+            </figcaption>
+          </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__header">
+            <p class="eyebrow">About &amp; credits</p>
+            <h2 class="section__title">Whose work this is</h2>
+            <p class="section__lead">
+              PARADOX is a study board, not a portfolio of my own image-making.
+              The pieces were collected because of how they handle a single
+              argument about time; they remain the property of their authors.
+              Where a designer signed the work, the signature is reproduced
+              below. If you are one of the authors and want a piece removed,
+              the contact address at the foot of this page reaches me directly.
+            </p>
+          </div>
+
+          <ul class="credits">
+            <li class="credit">
+              <h3 class="credit__name">Reuel Dsgn</h3>
+              <p class="credit__meta">
+                14 pieces — poster series, 2022, numbered 196, 200 and 208 of 365.
+                Signed <span class="card__author">@reuel.dsgn</span>.
+              </p>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">Jaz Heiman</h3>
+              <p class="credit__meta">
+                6 pieces — the HappyFatFont type specimen and release campaign.
+                Signed <span class="card__author">@Jazheiman</span>.
+              </p>
+              <a class="credit__link" href="https://heytype.xyz" rel="noopener noreferrer" target="_blank">
+                heytype.xyz
+              </a>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">Gebeiteld</h3>
+              <p class="credit__meta">
+                2 pieces — brand identity and print collateral for a building and
+                signing studio in Blerick, Netherlands.
+              </p>
+              <a class="credit__link" href="https://gebeiteld.work" rel="noopener noreferrer" target="_blank">
+                gebeiteld.work
+              </a>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">Robbrecht en Daem architecten</h3>
+              <p class="credit__meta">
+                3 pieces — screen captures of the studio's own website, kept for
+                its typographic restraint rather than its architecture.
+              </p>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">@songsandthespirits</h3>
+              <p class="credit__meta">
+                2 pieces — digital painting, signed in the lower margin of each
+                image.
+              </p>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">CMV</h3>
+              <p class="credit__meta">
+                1 piece — screen capture of the studio's home page.
+              </p>
+            </li>
+            <li class="credit">
+              <h3 class="credit__name">Unidentified</h3>
+              <p class="credit__meta">
+                4 pieces — three architectural photographs and one line drawing.
+                No author mark or source is present in the files. If you
+                recognise them, the credit will be added.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__header">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section__title">Corrections, credits, removals</h2>
+            <p class="section__lead">
+              Write to me if a credit is wrong, if a piece should carry your
+              name, or if you want your work taken down. Email is the only
+              channel — there is no mailing list behind this page.
+            </p>
+          </div>
+
+          <div class="contact__actions">
+            <a
+              class="button button--primary"
+              href="mailto:pablonietoperez369@gmail.com?subject=PARADOX%20—%20credit%20or%20removal"
+            >
+              Email me
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>PARADOX — a reference board on time in design.</p>
+        <nav class="site-footer__links" aria-label="Footer">
+          <a class="site-footer__link" href="#collection">Collection</a>
+          <a class="site-footer__link" href="#about">Credits</a>
+          <a
+            class="site-footer__link"
+            href="https://wib.digital"
+            rel="noopener noreferrer"
+            target="_blank"
+          >wib.digital</a>
+          <a
+            class="site-footer__link"
+            href="https://github.com/pabloWIB"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+      </div>
+      <p class="site-credit">
+        Built by <a href="https://wib.digital" rel="noopener">wib.digital</a> —
+        <a href="https://www.fiverr.com/pablonietop" rel="noopener">hire me on Fiverr</a>
+      </p>
+    </footer>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+    >
+      <div class="lightbox__bar">
+        <p class="lightbox__counter" data-lightbox-counter></p>
+        <button class="lightbox__control" type="button" data-lightbox-prev aria-label="Previous piece">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12.5 4L6.5 10l6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button class="lightbox__control" type="button" data-lightbox-next aria-label="Next piece">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M7.5 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button class="lightbox__control" type="button" data-lightbox-close aria-label="Close viewer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 4l12 12M16 4L4 16" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- The image element is created by lightbox.js so the document never
+           carries an <img> without a source. -->
+      <div class="lightbox__stage" data-lightbox-stage></div>
+
+      <div class="lightbox__caption">
+        <p class="lightbox__title" id="lightbox-title" data-lightbox-title></p>
+        <p class="lightbox__credit" data-lightbox-credit></p>
+      </div>
+    </div>
+  </body>
 </html>

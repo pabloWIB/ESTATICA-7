@@ -1,138 +1,155 @@
-[![171shots-so.png](https://i.postimg.cc/j5wd8pbc/171shots-so.png)](https://postimg.cc/1nSQXY4V)
-# Image Gallery - PARADOX
+# PARADOX — Image Gallery
 
-A simple image gallery website focused on time management and goal achievement. Features the "PARADOX" theme about making every second count towards your goals.
+A static, dependency-free reference board: 32 pieces of graphic, type and web design collected around one argument about time, each credited to its author.
 
-## What It Does
+![No dependencies](https://img.shields.io/badge/npm%20dependencies-0-brightgreen)
+[![Hire me on Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://www.fiverr.com/pablonietop)
+![No build step](https://img.shields.io/badge/build%20step-none-lightgrey)
+![First load](https://img.shields.io/badge/first%20load-626%20KB-blue)
 
-- Displays image gallery with smooth navigation
-- Shares time management philosophy
-- Newsletter signup for productivity tips
-- Merchandise section
-- Clean, motivational design
+![PARADOX](assets/img/og-cover.jpg)
 
-## What's Inside
+## Description
 
-- **HTML**: Basic gallery structure
-- **CSS**: Simple image layouts and styling
-- **JavaScript**: Gallery navigation and effects
-- No servers needed!
+PARADOX is a single-page gallery built without a framework, a bundler or a
+package manager. It exists to hold a curated set of design work — posters, type
+specimens, brand collateral, website captures and architectural photography —
+grouped by the idea they share: that time is finite and unevenly felt.
 
-## File Structure
+The interface stays deliberately quiet. A dark ground, one display face for the
+wordmark and pull-quote, a system stack for everything else, and a grid that
+gets out of the way of the work.
+
+**The pieces in this collection were not made by the author of this repository.**
+They were gathered as reference. Every card names the studio or designer behind
+it, and the About section lists each source in full. Four pieces carry no author
+mark and are labelled as unidentified rather than left blank. If you are one of
+the authors and want a piece removed, the contact link on the page reaches the
+maintainer directly.
+
+## Features
+
+- 32 pieces in a responsive grid, filterable by six groupings.
+- Per-piece attribution rendered in the markup, not injected by script.
+- Lightbox with keyboard navigation (arrows, `Escape`), a focus trap and focus
+  restoration; it steps only through the currently filtered set.
+- Mobile menu that closes on link choice, on `Escape` and on reaching the
+  desktop breakpoint, locking background scroll while open.
+- Works with JavaScript disabled — the full collection is in the HTML; script
+  only adds filtering and the lightbox.
+- Self-hosted subsetted fonts: no third-party requests anywhere on the page.
+
+## Tech stack
+
+| Layer | Technology | Role in project |
+|---|---|---|
+| Markup | HTML5 | `index.html` (1,023 lines) and `404.html` |
+| Styling | CSS3, custom properties | 3 files, ~984 lines, 28 KB — tokens, layout, components |
+| Scripting | Vanilla JS (ES5-compatible syntax) | 5 files, ~352 lines, 21 KB — one entry point plus 4 modules |
+| Typography | Caveat, self-hosted | 2 subsetted WOFF2 files, 100 KB total |
+| Imagery | WebP | 32 pieces, 2.4 MB on disk; 626 KB on first load |
+| Tooling | None | No `package.json`, no build, no dependencies |
+
+### Why classic scripts instead of ES modules
+
+`main.js` and its modules load as deferred classic scripts sharing a single
+`window.Paradox` namespace, rather than as ES modules. ES modules are blocked by
+CORS over the `file://` protocol, which would mean the page could only run
+behind a server. The current arrangement keeps one entry point and separate
+module files while letting `index.html` open correctly straight off disk.
+
+## Project structure
 
 ```
-image-gallery/
-├── index.html          # Main gallery page
-├── style.css          # Gallery styling
-├── script.js          # Image navigation
-├── info.html          # Information page
-├── merch.html         # Merchandise page
-├── images/
-│   ├── gallery/       # Your gallery photos
-│   └── thumbs/        # Thumbnail images
-└── README.md
+.
+├── index.html              # The board: hero, collection, credits, contact
+├── 404.html                # Error page, links back to the board
+├── robots.txt              # Allows all crawlers, points at the sitemap
+├── sitemap.xml             # Single canonical URL
+├── assets/
+│   ├── css/
+│   │   ├── base.css        # Tokens, reset, typography, a11y utilities
+│   │   ├── layout.css      # Container, header, sections, grid, footer
+│   │   └── components.css  # Buttons, filters, cards, lightbox
+│   ├── js/
+│   │   ├── main.js         # Entry point — runs the initialisers
+│   │   └── modules/
+│   │       ├── scroll-lock.js  # Reference-counted body scroll lock
+│   │       ├── nav.js          # Mobile menu
+│   │       ├── gallery.js      # Grouping filter
+│   │       └── lightbox.js     # Full-size viewer
+│   ├── img/
+│   │   ├── content/        # 32 WebP pieces, semantically named
+│   │   ├── logo/           # Favicon and touch icon
+│   │   └── og-cover.jpg    # Open Graph card, 1200×630
+│   └── fonts/
+│       ├── caveat-regular.woff2
+│       ├── caveat-bold.woff2
+│       └── caveat-OFL.txt  # SIL Open Font License, required on redistribution
+└── docs/
+    ├── auditoria.md        # Audit of the project before reorganisation
+    └── cambios.md          # Change log, grouped by phase
 ```
 
-## How to Start
+## Running it locally
 
-1. **Get the code**
-   ```
-   Download from: https://github.com/pabloWIB/Image-Gallery.git
-   ```
+No install step. Either works:
 
-2. **Open it**
-   - Double-click `index.html`
-   - View in your web browser
-   - No setup required!
+```bash
+# Straight off disk
+start index.html          # Windows
+open index.html           # macOS
 
-3. **Add your images**
-   - Put photos in `images/gallery/` folder
-   - Update image names in `index.html`
-   - Create thumbnails for faster loading
-
-## Easy Changes
-
-**Update the message:**
-- Change the time management quote
-- Replace "PARADOX" with your theme
-- Update newsletter content
-
-**Add your images:**
-```html
-<!-- In index.html, add: -->
-<img src="images/gallery/your-photo.jpg" alt="Description">
+# Or over HTTP
+npx serve .
 ```
 
-**Change colors:**
-```css
-/* In style.css */
-.gallery { background-color: #your-color; }
-.text-color { color: #your-choice; }
-```
+Both are supported. HTTP is closer to production and is what the deployed site
+uses; opening the file directly is enough for a quick look.
 
-## Gallery Features
+## Adding a piece
 
-**Basic Navigation:**
-- Click to view larger images
-- Simple next/previous buttons
-- Thumbnail preview grid
-- Responsive design for mobile
+1. Put the image in `assets/img/content/` as WebP, no wider than 800 px, named
+   for what it shows.
+2. Copy an existing `<figure class="card">` block in `index.html`, and set
+   `data-collection`, `src`, `width`, `height`, `alt`, the title and the credit.
+3. Add `loading="lazy"` unless the piece sits in the first row.
+4. Update the count on the matching filter button and on `All`.
 
-**Content Sections:**
-- Motivational quote about time
-- Newsletter signup area
-- Info and merchandise pages
-- Clean, focused layout
+There is no manifest and no build; markup order is page order.
 
-## Beginner Tips
+## Deployment
 
-**For Images:**
-- Use JPG for photos, PNG for graphics
-- Keep file sizes under 1MB for fast loading
-- Name files clearly (no spaces)
-- Create thumbnail versions (smaller sizes)
+Static hosting, no build command and no output directory — upload the
+repository root as-is. The canonical URL in `index.html`, `robots.txt` and
+`sitemap.xml` is `https://paradoxgallery.wib.digital/`; change all three
+together if the domain changes.
 
-**For Customization:**
-- Replace Lorem ipsum with real content
-- Add your own photos and quotes
-- Test on phone and computer
-- Keep it simple at first
+For the 404 page to be served on a not-found response, point the host's error
+document at `404.html`. On Vercel and Netlify this is automatic for a static
+site with `404.html` in the root.
 
-## Free Hosting
+## Licensing
 
-- **GitHub Pages**: Upload and activate
-- **Netlify**: Drag folder and drop
-- **Vercel**: Simple deployment
+The Caveat typeface is used under the SIL Open Font License; the licence text
+ships in `assets/fonts/caveat-OFL.txt`.
 
-## What to Add Later
+The collected pieces in `assets/img/content/` remain the property of their
+respective authors and are reproduced here as credited reference, not as work of
+this repository's author. They are not covered by any licence granted by this
+repository.
 
-- Lightbox popup for full-size images
-- Image categories/tags
-- Search functionality
-- Social sharing buttons
-- Contact form for newsletter
+## Author
 
-## Image Tips
+**Pablo Nieto Pérez** — [wib.digital](https://wib.digital)
+GitHub: [@pabloWIB](https://github.com/pabloWIB)
 
-**Optimize for web:**
-- Resize large images (max 1920px wide)
-- Compress without losing quality
-- Use consistent aspect ratios
-- Add alt text for accessibility
+## Hire me
 
-**Gallery Organization:**
-- Group similar images together
-- Use descriptive filenames
-- Create different categories
-- Consider loading speed
+I build **custom internal tools, CRMs and dashboards** for small teams, and
+**conversion-focused websites** for businesses.
 
-## Learning Resources
-
-- HTML image tags: W3Schools
-- CSS Grid/Flexbox: CSS-Tricks
-- JavaScript gallery tutorials: YouTube
-- Image optimization: TinyPNG
-
----
-
-*"Every second counts - make your gallery count too!"*
+- [Custom internal tool, CRM or dashboard](https://www.fiverr.com/pablonietop/build-a-custom-internal-app-for-your-business) — from $45
+- [Conversion-focused website](https://www.fiverr.com/pablonietop/convert-your-landing-page-design-to-code) — from $80
+- [All my services on Fiverr](https://www.fiverr.com/pablonietop)
+- [wib.digital](https://wib.digital)

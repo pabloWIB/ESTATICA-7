@@ -1,0 +1,275 @@
+/* ==========================================================================
+   components.css — buttons, filters, gallery cards, lightbox
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Buttons
+   -------------------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+.button--primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.button--primary:hover {
+  background-color: var(--color-accent-bright);
+}
+
+.button--primary:active {
+  transform: translateY(1px);
+}
+
+.button--secondary {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-text-muted);
+}
+
+.button--secondary:active {
+  transform: translateY(1px);
+}
+
+.button[disabled],
+.button[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   2. Filters
+   -------------------------------------------------------------------------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.filter {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: color var(--transition), border-color var(--transition),
+    background-color var(--transition);
+}
+
+.filter:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.filter[aria-pressed="true"] {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.filter__count {
+  margin-left: var(--space-1);
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   3. Gallery card
+   -------------------------------------------------------------------------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card__trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: var(--color-surface-raised);
+  line-height: 0;
+}
+
+.card__trigger:hover .card__image,
+.card__trigger:focus-visible .card__image {
+  opacity: 0.82;
+}
+
+.card__trigger:focus-visible {
+  outline-offset: -3px;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  transition: opacity var(--transition);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+}
+
+.card__credit {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.card__author {
+  color: var(--color-text);
+}
+
+/* --------------------------------------------------------------------------
+   4. Lightbox
+   -------------------------------------------------------------------------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(6 6 6 / 96%);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lightbox__counter {
+  margin-right: auto;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.lightbox__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.lightbox__control:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+
+.lightbox__control[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.lightbox__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--space-3);
+}
+
+.lightbox__image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox__caption {
+  padding: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.lightbox__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.lightbox__credit {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+/* Prevents the page behind the lightbox / mobile menu from scrolling */
+.scroll-locked {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   5. Media queries
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .lightbox__bar,
+  .lightbox__caption {
+    padding-inline: var(--space-5);
+  }
+
+  .lightbox__stage {
+    padding: var(--space-5);
+  }
+}

@@ -1,0 +1,451 @@
+/* ==========================================================================
+   layout.css — containers, header, footer, sections, gallery grid
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Container
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   2. Header
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgb(13 13 13 / 88%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--header-height);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand__mark {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+}
+
+.brand__text {
+  padding-top: 0.15em;
+}
+
+/* Navigation — closed by default, opened by [data-open] below 768px */
+
+.site-nav {
+  display: none;
+}
+
+.site-nav[data-open="true"] {
+  display: block;
+  position: fixed;
+  inset: var(--header-height) 0 0;
+  padding: var(--space-4) var(--space-3) var(--space-6);
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  overflow-y: auto;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.site-nav__link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.site-nav__link:active {
+  color: var(--color-accent);
+}
+
+/* Mobile menu toggle — hidden from 768px up */
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+
+.nav-toggle__icon--close {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon--open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon--close {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sections
+   -------------------------------------------------------------------------- */
+
+.section {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.section--flush {
+  border-top: none;
+}
+
+.section__header {
+  margin-bottom: var(--space-5);
+}
+
+.section__title {
+  margin-top: var(--space-2);
+}
+
+.section__lead {
+  margin-top: var(--space-3);
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - var(--header-height));
+  padding-block: var(--space-7);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.hero__quote {
+  max-width: 34ch;
+  margin-top: var(--space-5);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  border-left: 2px solid var(--color-accent);
+  padding-left: var(--space-3);
+}
+
+.hero__body {
+  max-width: var(--measure);
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-7);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   5. Gallery grid
+   -------------------------------------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.gallery__empty {
+  padding: var(--space-6) 0;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   6. Credits list
+   -------------------------------------------------------------------------- */
+
+.credits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.credit {
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.credit__name {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.credit__meta {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.credit__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  margin-top: var(--space-1);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.credit__link:hover,
+.credit__link:focus-visible {
+  color: var(--color-accent-bright);
+  border-bottom-color: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   7. Contact
+   -------------------------------------------------------------------------- */
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   8. Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.site-footer__link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  margin-left: calc(var(--space-3) * -1);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.site-footer__link + .site-footer__link {
+  margin-left: 0;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+/* --------------------------------------------------------------------------
+   9. Error page
+   -------------------------------------------------------------------------- */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - var(--header-height));
+  padding-block: var(--space-7);
+}
+
+.error-page__code {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.error-page__title {
+  margin-top: var(--space-3);
+}
+
+.error-page__body {
+  max-width: var(--measure);
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+}
+
+.error-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   10. Media queries — mobile-first, min-width only
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-5);
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .credits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Desktop navigation — reset the mobile panel in both states */
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .site-nav[data-open="true"] {
+    display: block;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+    border-top: none;
+    overflow: visible;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .credits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  .gallery {
+    gap: var(--space-5);
+  }
+}
