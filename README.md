@@ -122,11 +122,11 @@ There is no manifest and no build; markup order is page order.
 
 Static hosting, no build command and no output directory — upload the
 repository root as-is. The canonical URL in `index.html`, `robots.txt` and
-`sitemap.xml` is `https://paradoxgallery.wib.digital/`; change all three
+`sitemap.xml` is `https://pablowib.github.io/Paradox-Image-Gallery/`; change all three
 together if the domain changes.
 
 For the 404 page to be served on a not-found response, point the host's error
-document at `404.html`. On Vercel and Netlify this is automatic for a static
+document at `404.html`. On GitHub Pages and Netlify this is automatic for a static
 site with `404.html` in the root.
 
 ## Licensing

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paradoxgallery.wib.digital/sitemap.xml
+Sitemap: https://pablowib.github.io/Paradox-Image-Gallery/sitemap.xml
